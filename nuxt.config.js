@@ -1,4 +1,9 @@
+const BASE_URL = process.env.BASE_URL
+
 export default {
+  publicRuntimeConfig: {
+    base_url: BASE_URL,
+  },
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'nuxtjs-vant2',
@@ -43,7 +48,7 @@ export default {
 
   axios: {
     // Axios module configuration
-    baseURL: 'http://mark.local.net' // Your API base URL
+    baseURL: BASE_URL // Your API base URL
     // Other options...
   },
 

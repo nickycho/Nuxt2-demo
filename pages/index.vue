@@ -31,7 +31,7 @@ export default {
     changeMsg() {
       // this.msg = 'Hello world!'
       this.msg = this.$refs.textInput.value
-      // debugger
+      debugger
       this.$axios.get('/api/task/tasks').then(res => {
         console.log(res)
       }).catch(err => {
