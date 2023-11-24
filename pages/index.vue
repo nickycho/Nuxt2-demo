@@ -1,6 +1,11 @@
 <template>
   <div class="container">
     <div>
+      <button v-if="!$auth.loggedIn" @click="login">Login</button>
+      <div v-else>
+        <p>Welcome, {{ $auth.user.name }}</p>
+        <button @click="logout">Logout</button>
+      </div>
       <h1 class="title">
         {{ msg }}
       </h1>
@@ -37,6 +42,18 @@ export default {
       }).catch(err => {
         console.log(err)
       })
+    },
+    async logout() {
+      try {
+        await this.$auth.logout();
+        // Handle after successful logout
+      } catch (error) {
+        console.error('Logout error:', error);
+      }
+    },
+    login() {
+      this.$router.push('/login');
+
     }
   }
 }

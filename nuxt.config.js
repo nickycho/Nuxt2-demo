@@ -44,6 +44,7 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     '@nuxtjs/axios',
+    '@nuxtjs/auth-next',
   ],
 
   axios: {
@@ -51,6 +52,37 @@ export default {
     baseURL: BASE_URL // Your API base URL
     // Other options...
   },
+
+  auth: {
+    strategies: {
+      local: {
+        provider: 'laravel/jwt',
+        url: BASE_URL,
+        endpoints: {
+          logout: false,
+          refresh: false,
+          user: {
+            url: '/api/auth/me',
+          },
+        },
+        user: {
+          property: 'user'
+        },
+        token: {
+          property: 'token',
+          maxAge: 60 * 60 * 24 * 7
+        },
+        refreshToken: {
+          maxAge: 60 * 60 * 24 * 30
+        },
+    }
+
+    },
+    redirect: {
+      login: '/login',
+      logout: '/',
+    }
+  }, 
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
