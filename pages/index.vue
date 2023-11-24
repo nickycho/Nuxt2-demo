@@ -14,6 +14,7 @@
 import { mapGetters } from 'vuex'
 export default {
   name: 'IndexPage',
+  
   data() {
     return {
       msg: 'Hello world!'
@@ -30,6 +31,12 @@ export default {
     changeMsg() {
       // this.msg = 'Hello world!'
       this.msg = this.$refs.textInput.value
+      // debugger
+      this.$axios.get('/api/task/tasks').then(res => {
+        console.log(res)
+      }).catch(err => {
+        console.log(err)
+      })
     }
   }
 }
