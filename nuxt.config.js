@@ -84,6 +84,13 @@ export default {
     }
   }, 
 
+  serverMiddleware: [
+    {
+      path: '/login',
+      handler: '~/server-middleware/cors.js'
+    }
+  ],
+
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
   }
