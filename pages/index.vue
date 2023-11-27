@@ -1,6 +1,7 @@
 <template>
   <div class="container">
     <div>
+      <my-circle :myRate="40" />
       <button v-if="!$auth.loggedIn" @click="login">Login</button>
       <div v-else>
         <p>Welcome, {{ $auth.user.name }}</p>
