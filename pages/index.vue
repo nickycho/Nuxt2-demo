@@ -31,6 +31,7 @@ export default {
   },
   mounted() {
     this.msg = this.getOtherData + ' world!'
+    this.$myLog('index mounted');
     console.log('mounted2')
   },
   methods: {
