@@ -28,6 +28,7 @@
 <script>
 export default {
   name: 'LoginPage',
+  layout: 'blank',
   data() {
     return {
       username: '',
