@@ -29,6 +29,13 @@
 export default {
   name: 'LoginPage',
   layout: 'blank',
+  
+  head() {
+    return {
+      title: 'Login'
+    }
+  },
+
   data() {
     return {
       username: '',
