@@ -1,3 +1,4 @@
+
 Nuxt.js Demo Project
 ====================
 
@@ -7,12 +8,12 @@ Features
 --------
 
 -   Nuxt.js v2
--   [@nuxtjs/axios](https://github.com/nuxt-community/axios-module) - Making HTTP requests
--   [@nuxtjs/auth-next](https://auth.nuxtjs.org/) - Authentication module
+-   [@nuxtjs/axios](https://github.com/nuxt-community/axios-module) - Making HTTP requests
+-   [@nuxtjs/auth-next](https://auth.nuxtjs.org/) - Authentication module
 -   Custom layouts
 -   Custom serverMiddleware
 -   Custom plugin
--   Dynamic `titleTemplate`
+-   Dynamic `titleTemplate`
 -   Reusable components
 -   Route middleware
 
@@ -21,8 +22,8 @@ Layouts
 
 There are 2 layouts:
 
--   default - The main layout used on most pages
--   custom - A custom simple layout for the `/custom` route
+-   default - The main layout used on most pages
+-   custom - A custom simple layout for the `/custom` route
 
 Server Middleware
 -----------------
@@ -39,8 +40,8 @@ Components
 
 Reusable components:
 
--   `<BaseButton>` - A button with default styles
--   `<BaseIcon>` - An icon wrapper with default styles
+-   `<BaseButton>` - A button with default styles
+-   `<BaseIcon>` - An icon wrapper with default styles
 
 These components are registered globally and used across pages.
 
@@ -58,14 +59,23 @@ Displays username when logged in on `/auth` route.
 
 Build Setup
 -----------
+install dependencies
+```bash
+  $ npm  install
+```
+serve with hot reload at localhost:3000  
+```bash
+  $ npm run dev
+```
+build for production and launch server  
+```bash
+  $ npm run build 
+  $ npm run start
+```
 
-bash
-
-Copy code
-
-`# install dependencies  $ npm  install
-# serve with hot reload at localhost:3000  $ npm run dev
-# build for production and launch server  $ npm run build $ npm run start
-# generate static project  $ npm run generate`
+generate static project
+```bash
+  $ $ npm run generate
+```
 
 For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org/).
