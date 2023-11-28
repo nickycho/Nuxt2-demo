@@ -1,16 +1,19 @@
 <template>
-    <div>test</div>
+    <div>
+        Admin Page
+    </div>
 </template>
 
 <script>
 export default {
     layout: 'default',
-    middleware: 'auth',
+    middleware: 'admin',
 
     head() {
         return {
-            title: 'Home'
+            title: 'Admin'
         }
     },
 }
+
 </script>

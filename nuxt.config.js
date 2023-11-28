@@ -86,6 +86,11 @@ export default {
     }
   }, 
 
+  router: {
+    // every page will through this middleware
+    middleware: ['logger'],
+  },
+
   serverMiddleware: [
     {
       path: '/login',
